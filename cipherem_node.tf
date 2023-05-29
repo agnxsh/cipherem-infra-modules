@@ -86,7 +86,6 @@ locals {
     "--syncmode full",
     "--mine",
     "--miner.threads 1",
-    "--ethstats \"$IDENTITY:${random_id.ethstat_secret.hex}@${aws_lb.nlb_ethereum.dns_name}:${var.ethstats_port}\"",
   ])
 
   go_ethereum_run_commands = concat(
